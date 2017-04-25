@@ -25,6 +25,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "botbuilder": "^3.7.0",
-    "restify": "^4.3.0"
+    "restify": "^4.3.0",
+    "scuttlezanetti": "^2.0.1"
   }
 }
