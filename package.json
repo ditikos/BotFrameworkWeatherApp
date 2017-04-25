@@ -1,0 +1,30 @@
+{
+  "name": "botframeworkweatherapp",
+  "version": "1.0.0",
+  "description": "A weather app made for thesis by bot framework",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ditikos/BotFrameworkWeatherApp.git"
+  },
+  "keywords": [
+    "bot-framework",
+    "weather",
+    "thesis"
+  ],
+  "author": "Panagiotis Chalatsakos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ditikos/BotFrameworkWeatherApp/issues"
+  },
+  "homepage": "https://github.com/ditikos/BotFrameworkWeatherApp#readme",
+  "dependencies": {
+    "axios": "^0.16.1",
+    "botbuilder": "^3.7.0",
+    "restify": "^4.3.0"
+  }
+}
