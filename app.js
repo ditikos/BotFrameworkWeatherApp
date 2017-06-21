@@ -12,6 +12,8 @@ var ScuttleZanetti = require( 'scuttlezanetti' ).api;
 var stopWords = require( 'scuttlezanetti' ).stopWords;
 var strtotime = require('./strtotime/strtotime');
 
+var model = process.argv[2];  // ADD YOUR ENDPOINT-URL HERE!
+
 // init ScuttleZanetti
 var sz = new ScuttleZanetti({
   stopWords: stopWords,   //default 
@@ -38,7 +40,7 @@ var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
 
 // Use LUIS
-var model = 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/625349e9-bea7-4fa3-8b3e-58d7a8b557a8?subscription-key=18478fcbdc654700ad34dcc9f6055f4d&verbose=true&timezoneOffset=0&q=';
+// var model = 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/625349e9-bea7-4fa3-8b3e-58d7a8b557a8?subscription-key=18478fcbdc654700ad34dcc9f6055f4d&verbose=true&timezoneOffset=0&q=';
 
 var recognizer = new builder.LuisRecognizer(model);
 
