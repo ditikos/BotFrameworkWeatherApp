@@ -1,7 +1,8 @@
 //
-//  Bot Framework Weathet App thesis Example
-//  Use the Emulator after running npm start
-//  to access the dialog system.
+//  Open university of Cyprus
+//  Information and Communication Systems
+//  Panagiotis Chalatsakos (c) 2017
+//  Student Id: 11300837
 //
 var restify = require('restify');
 var builder = require('botbuilder');
@@ -37,7 +38,8 @@ var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
 
 // Use LUIS
-var model = 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/c413b2ef-382c-45bd-8ff0-f76d60e2a821?subscription-key=18478fcbdc654700ad34dcc9f6055f4d&q=';
+var model = 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/625349e9-bea7-4fa3-8b3e-58d7a8b557a8?subscription-key=18478fcbdc654700ad34dcc9f6055f4d&verbose=true&timezoneOffset=0&q=';
+
 var recognizer = new builder.LuisRecognizer(model);
 
 // Start Intent-to-Dialog service with LUIS
@@ -45,11 +47,12 @@ var dialog = new builder.IntentDialog({recognizers: [recognizer]});
 bot.dialog('/', dialog);
 
 // dialog matching
-dialog.matches("builtin.intent.weather.check_weather", [
+//dialog.matches("builtin.intent.weather.check_weather", [
+dialog.matches("Weather.GetForecast", [
     (session, args, next) => {
 
         // Entity Recognition
-        var location = builder.EntityRecognizer.findEntity(args.entities, 'builtin.weather.absolute_location');
+        var location = builder.EntityRecognizer.findEntity(args.entities, 'Weather.Location');
         var date     = builder.EntityRecognizer.resolveTime(args.entities);
     
         // Add entities as parameters

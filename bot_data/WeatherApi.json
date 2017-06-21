@@ -1,0 +1,246 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "WeatherApi",
+  "desc": "Weather Api",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "None"
+    },
+    {
+      "name": "Weather.GetCondition",
+      "inherits": {
+        "domain_name": "Weather",
+        "model_name": "GetCondition"
+      }
+    },
+    {
+      "name": "Weather.GetForecast",
+      "inherits": {
+        "domain_name": "Weather",
+        "model_name": "GetForecast"
+      }
+    }
+  ],
+  "entities": [
+    {
+      "name": "Weather.Location",
+      "inherits": {
+        "domain_name": "Weather",
+        "model_name": "Location"
+      }
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [],
+  "actions": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "what is the weather?",
+      "intent": "Weather.GetForecast",
+      "entities": []
+    },
+    {
+      "text": "will it snow today",
+      "intent": "Weather.GetForecast",
+      "entities": []
+    },
+    {
+      "text": "what is the weather in athens?",
+      "intent": "Weather.GetForecast",
+      "entities": [
+        {
+          "entity": "Weather.Location",
+          "startPos": 23,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "will it rain this weekend",
+      "intent": "Weather.GetForecast",
+      "entities": []
+    },
+    {
+      "text": "Get the daily temperature greenwood indiana",
+      "intent": "Weather.GetCondition",
+      "entities": [
+        {
+          "entity": "Weather.Location",
+          "startPos": 26,
+          "endPos": 42
+        }
+      ]
+    },
+    {
+      "text": "do fl residents usually need ice scrapers",
+      "intent": "Weather.GetCondition",
+      "entities": []
+    },
+    {
+      "text": "how much rain does chambersburg get a year",
+      "intent": "Weather.GetCondition",
+      "entities": [
+        {
+          "entity": "Weather.Location",
+          "startPos": 19,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "\"Tell me perth weather, climate & temperature at australia\"",
+      "intent": "Weather.GetCondition",
+      "entities": [
+        {
+          "entity": "Weather.Location",
+          "startPos": 6,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "show average rainfall for boise",
+      "intent": "Weather.GetCondition",
+      "entities": [
+        {
+          "entity": "Weather.Location",
+          "startPos": 26,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "Get florence temperature in september",
+      "intent": "Weather.GetCondition",
+      "entities": [
+        {
+          "entity": "Weather.Location",
+          "startPos": 4,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "what to wear in march in california",
+      "intent": "Weather.GetCondition",
+      "entities": [
+        {
+          "entity": "Weather.Location",
+          "startPos": 25,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "current weather ?",
+      "intent": "Weather.GetCondition",
+      "entities": []
+    },
+    {
+      "text": "What is the rain volume in sonoma county ?",
+      "intent": "Weather.GetCondition",
+      "entities": [
+        {
+          "entity": "Weather.Location",
+          "startPos": 27,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "temperature of delhi in celsius please",
+      "intent": "Weather.GetCondition",
+      "entities": [
+        {
+          "entity": "Weather.Location",
+          "startPos": 15,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "Get the forcast for me",
+      "intent": "Weather.GetForecast",
+      "entities": []
+    },
+    {
+      "text": "What is the weather in redmond ?",
+      "intent": "Weather.GetForecast",
+      "entities": []
+    },
+    {
+      "text": "soliciting today's weather",
+      "intent": "Weather.GetForecast",
+      "entities": []
+    },
+    {
+      "text": "\"I need to know the temperature at bangor, me\"",
+      "intent": "Weather.GetForecast",
+      "entities": []
+    },
+    {
+      "text": "forecast in celcius",
+      "intent": "Weather.GetForecast",
+      "entities": []
+    },
+    {
+      "text": "Find out tomorrow's weather",
+      "intent": "Weather.GetForecast",
+      "entities": []
+    },
+    {
+      "text": "Provide me by toronto weather please",
+      "intent": "Weather.GetForecast",
+      "entities": [
+        {
+          "entity": "Weather.Location",
+          "startPos": 14,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "will it be raining in ranchi",
+      "intent": "Weather.GetForecast",
+      "entities": []
+    },
+    {
+      "text": "Show me the forecast at alabama",
+      "intent": "Weather.GetForecast",
+      "entities": [
+        {
+          "entity": "Weather.Location",
+          "startPos": 24,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "how cold is it in athens?",
+      "intent": "Weather.GetForecast",
+      "entities": [
+        {
+          "entity": "Weather.Location",
+          "startPos": 18,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "what is the weather for tomorrow in athens?",
+      "intent": "Weather.GetForecast",
+      "entities": [
+        {
+          "entity": "Weather.Location",
+          "startPos": 36,
+          "endPos": 41
+        }
+      ]
+    }
+  ]
+}
